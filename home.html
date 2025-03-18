@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mercado Econômico</title>
+        <link rel="stylesheet" href="home.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+   
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="logo.png" alt="logo" width="120" height="120">
+            </div>
+            <h1>Mercado Econômico</h1>
+            <nav>
+                <ul>
+                    <div class="opcoes">
+                        <li><a href="#">Início</a></li>                        
+                        <li><a href="produto.html">Produtos</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                        <li>👤<a href="#">Login</a></li>
+                    </div>
+                </ul>
+            </nav>
+            <!-- Barra de Pesquisa -->
+            <div class="search-container">
+                <input class="search-input" type="text" id="search" placeholder="Pesquise aqui por produto e/ou marca..." autocomplete="off">
+                <button class="search-button">🔍</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="gallery">
+                 <br>
+        <div class="gallery-container">
+            <img id="gallery-image" src="saveiro.jpg" alt="Imagem da galeria">
+            <div class="gallery-descriptions" id="gallery-description">Descrição da imagem 1</div>
+            <div class="gallery-controls">
+                <button id="prev">❮</button>
+                <button id="next">❯</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+    // Galeria de Imagens
+        const images = [
+            { src: 'fotos/bannerr.jpeg'},
+            { src: 'antigo.jpg', description: 'O Chevette Turbo está de volta com uma força incrível! Equipado com um motor turbo que garante acelerações rápidas e impressionantes, este clássico está pronto para dominar a pista. Com um visual renovado e uma performance surpreendente, o Chevette Turbo promete arrancadas de tirar o fôlego. Não perca a oportunidade de ver este ícone transformado em uma máquina de velocidade!' },
+            { src: 'antigo2.jpg', description: 'O Quadrado Turbo 2 está para acelerar na pista de arrancada! Com seu motor turbo atualizado e um design clássico repaginado, este hatchback combina nostalgia e potência. Suas melhorias na performance garantem arrancadas rápidas e uma condução emocionante.' },
+            { src: 'bmw.jpg', description: 'A BMW M4 Turbo chega com tudo para a arrancada! Equipado com um motor turbo potente e tecnologia de ponta, este esportivo oferece acelerações impressionantes e uma experiência de condução de alto nível. Com um design elegante e aerodinâmico, a M4 Turbo combina luxo e performance, garantindo uma presença marcante na pista. Prepare-se para testemunhar o desempenho excepcional desta máquina!' }
+        ];
+        let currentIndex = 0;
+
+        const imgElement = document.getElementById('gallery-image');
+        const descriptionElement = document.getElementById('gallery-description');
+
+        function updateGallery() {
+            imgElement.src = images[currentIndex].src;
+            descriptionElement.textContent = images[currentIndex].description;
+        }
+
+        document.getElementById('prev').addEventListener('click', () => {
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+            updateGallery();
+        });
+
+        document.getElementById('next').addEventListener('click', () => {
+            currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+            updateGallery();
+        });
+
+        updateGallery(); //
+    </script>
+
+    <!-- Seção de Produtos -->
+    <section class="produtos">
+        <div class="container">
+            <h2>Nossos Produtos</h2>
+            <div class="produtos-lista">
+                <div class="produto">
+                    <img src="fotos/cebola.jpeg" alt="Produto 1">  
+                    <h3>Cebola</h3>
+                    <p>Descrição do produto.</p>
+                    <button>Adicionar ao Carrinho</button>
+                </div>
+                <div class="produto">
+                    <img src="fotos/tomate.jpeg" alt="Produto 2">
+                    <h3>Tomate</h3>
+                    <p>Descrição do produto.</p>
+                    <button>Adicionar ao Carrinho</button>
+                </div>
+                <div class="produto">
+                    <img src="fotos/limao.jpeg" alt="Produto 3">
+                    <h3>Limão</h3>
+                    <p>Descrição do produto.</p>
+                    <button>Adicionar ao Carrinho</button>
+                </div>
+                <div class="produto">
+                    <img src="fotos/alho.jpeg" alt="Produto 4">
+                    <h3>Alho</h3>
+                    <p>Descrição do produto.</p>
+                    <button>Adicionar ao Carrinho</button>
+                </div>
+                <div class="produto">
+                    <img src="fotos/hortela.jpeg" alt="Produto 5">
+                    <h3>Hortelã</h3>
+                    <p>Descrição do produto.</p>
+                    <button>Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Mercado Econômico - Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
