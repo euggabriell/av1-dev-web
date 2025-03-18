@@ -87,35 +87,53 @@ header nav ul li a:hover::after {
 
 /* Barra de Pesquisa */
 .search-container {
-    position: relative;
     display: flex;
+    flex-direction: row;
     align-items: center;
+
+    background-color: #eb8304;
+
+    border: 1px solid transparent;
+    border-radius: 18px;
+
+    width: 30%;
+
+    transition: 250ms ease-in-out all;
+}
+
+.search-container:focus-within {
+    border: 1px solid #e9dfdf;
 }
 
 .search-input {
-    background-color: transparent;
-    border: 1px solid #ddd;
+    background: transparent;
+
+    border: 1px solid transparent;
     border-radius: 20px;
+
     padding: 10px 15px;
-    width: 500px;
+    width: 70%;
+
     font-size: 1em;
     outline: none;
-    color: black;
+    color: #fdfdfd;
+
+    width: 87%;
 }
 
 .search-input::placeholder {
     color: white;
 }
 
-/* Estilizando o botão da lupa */
 .search-button {
     background: none;
     border: none;
     cursor: pointer;
-    position: absolute;
-    right: 10px;
+
     font-size: 1.2em;
-    color: gray;
+    color: #FFF;
+
+    width: fit-content;
 }
 
 /* Produtos */
