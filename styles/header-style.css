@@ -24,19 +24,23 @@ header #logo-title .logo {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    
 }
 
 header #logo-title .logo img {
-    height: 60px;
-    width: 100px;
+    height: clamp( 45px, 9vw , 60px);
+    width: clamp( 70px, 10vw , 100px);
 }
 
 header #logo-title h1 {
-    font-size: 1.7em;
+    font-size: clamp( 18px, 4vw ,27px);
     line-height: 1.2;
     text-shadow: -2px 1px 2px rgba(21, 61, 80, .2);
     -webkit-text-stroke: .13px white;
     color: #263848;
+
+    margin: 0;
 }
 
 header nav {
@@ -132,3 +136,14 @@ header nav ul li a:hover::after {
 
     width: fit-content;
 }
+
+button#side-bar-button {
+    background: none;
+    border: none;
+}
+
+button#side-bar-button > img {
+    height: 30px;
+    width: 30px;
+}
+
