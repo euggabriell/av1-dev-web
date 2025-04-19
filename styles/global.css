@@ -5,8 +5,12 @@
 }
 
 body {
+    position: relative;
+
     font-family: "Sora", sans-serif;
     line-height: 1.6;
+
+    overflow-x: hidden;
 }
 
 button {

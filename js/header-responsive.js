@@ -1,60 +1,41 @@
+import {headerHTML, headerResponsiveHTML, sideBarHTML} from './header-html.js'
+
 const header = document.querySelector('header')
 
 function responsiveHeader() {
-    const baseUrl = `${window.location.origin}/${window.location.pathname.split("/")[1]}/`
+    if(window.innerWidth < 877) {
 
-    if(window.innerWidth < 835) {
+        document.querySelector("body").appendChild(sideBarHTML)
+
         header.classList.add("responsive")
 
-        header.innerHTML = `
-            <div id="logo-title">
-                <div class="logo">
-                    <img src="${window.location.origin}/assets/svg/cart-icon.svg" alt="logo">
-                </div>
-                <h1>Mercado <br>Econômico</h1>
-            </div>
-            
-            <button id="side-bar-button">
-                <img src="${window.location.origin}/assets/svg/side-bar-icon.svg" alt="menu lateral">
-            </button>
-        `
+        header.innerHTML = headerResponsiveHTML
+        
+        const openSideBarButton = document.querySelector("header.responsive button#open-side-bar")
 
-        const headerButton = document.querySelector("header.responsive button")
+        openSideBarButton.addEventListener("click", () => {
+            sideBarHTML.style.animation = "";
+            sideBarHTML.offsetHeight; // força reflow, obriga o navegador a acessar a propriedade do elemento forçando-o a recalcular o layout de estilização
 
-        headerButton.addEventListener("click", () => {
-            console.log("ola mundo")
+            sideBarHTML.classList.remove("close")
+
+            document.querySelector("button#close-side-bar").addEventListener("click", () => {
+
+                sideBarHTML.style.animation = "sideBarAnimation 1s ease-in-out forwards reverse"
+
+                sideBarHTML.addEventListener("animationend", () => {
+                    sideBarHTML.classList.add("close");
+                }, { once: true }); 
+            })
         })
+
     } else {
         header.classList.remove("responsive")
 
-        header.innerHTML = `
-            <div id="logo-title">
-                <div class="logo">
-                    <img src="${window.location.origin}/assets/svg/cart-icon.svg" alt="logo">
-                </div>
-                <h1>Mercado <br>Econômico</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href=${baseUrl}index.html>Início</a></li>                        
-                    <li><a href=${baseUrl}pages/produto.html>Produtos</a></li>
-                    <li><a href=${baseUrl}pages/sobre.html>Sobre</a></li>
-                    <li><a href=${baseUrl}pages/contato.html>Contato</a></li>
-                </ul>
-            </nav>
-        
-        <div class="search-container">
-            <input class="search-input" type="text" id="search" placeholder="Pesquise aqui por produto e/ou marca..." autocomplete="off">
-            <button class="search-button">
-                <img src="./assets/svg/lupa.svg" alt="Lupa">
-            </button>
-        </div>
-        `
+        header.innerHTML = headerHTML
     }
 }
 
 responsiveHeader()
-
-console.log(window.location.pathname)
 
 window.addEventListener("resize", responsiveHeader)

@@ -24,13 +24,11 @@ header #logo-title .logo {
     display: flex;
     justify-content: center;
     align-items: center;
-
-    
 }
 
 header #logo-title .logo img {
-    height: clamp( 45px, 9vw , 60px);
-    width: clamp( 70px, 10vw , 100px);
+    height: clamp( 38px, 9vw , 55px);
+    width: clamp( 60px, 10vw , 100px);
 }
 
 header #logo-title h1 {
@@ -41,6 +39,8 @@ header #logo-title h1 {
     color: #263848;
 
     margin: 0;
+
+    height: fit-content;
 }
 
 header nav {
@@ -137,13 +137,44 @@ header nav ul li a:hover::after {
     width: fit-content;
 }
 
-button#side-bar-button {
+button.side-bar-button {
     background: none;
     border: none;
 }
 
-button#side-bar-button > img {
+button.side-bar-button > img {
     height: 30px;
     width: 30px;
 }
 
+#side-bar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10;
+
+    width: clamp(150px, 25vw, 200px);
+    height: 100vh;
+    padding: 10% 6%;
+
+    border-radius: 70px 0px 0px 70px;
+
+    background-color: red;
+
+    transition: all 1s ease-in-out;
+}
+
+#side-bar.close {
+    transform: translateX(120%);
+    animation: none;
+}
+
+@keyframes sideBarAnimation {
+    from {
+        transform: translateX(120%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
