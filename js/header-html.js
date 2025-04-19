@@ -46,6 +46,15 @@ sideBarHTML.innerHTML = `
     <button class="side-bar-button" id="close-side-bar">
         <img src="${window.location.origin}/assets/svg/close-icon.svg" alt="logo">
     </button>
+
+    <nav>
+        <ul>
+            <li><a href=${baseUrl}index.html>Início</a></li>                        
+            <li><a href=${baseUrl}pages/produto.html>Produtos</a></li>
+            <li><a href=${baseUrl}pages/sobre.html>Sobre</a></li>
+            <li><a href=${baseUrl}pages/contato.html>Contato</a></li>
+        </ul>
+    </nav>
 `
 
 export {headerResponsiveHTML, headerHTML, sideBarHTML}
