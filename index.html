@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./styles/global.css">
     <link rel="stylesheet" href="./styles/header-style.css">
     <link rel="stylesheet" href="./styles/footer-style.css">
+    <link rel="stylesheet" href="./styles/produto-component-style.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
 
@@ -18,13 +19,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
 
     <script type="module" src="./js/header-responsive.js" defer></script>
+    <script type="module" src="./js/gallery-banner-controller.js" defer></script>
 </head>
 <body>
     <header>
     </header>
 
     <section class="gallery">
-                 <br>
+        <br>
         <div class="gallery-container">
             <img id="gallery-image" src="saveiro.jpg" alt="Imagem da galeria">
             <div class="gallery-descriptions" id="gallery-description">Descrição da imagem 1</div>
@@ -35,68 +37,51 @@
         </div>
     </section>
 
-    <script>
-    // Galeria de Imagens
-        const images = [
-            { src: './assets/fotos/Oferta1.png'},
-            { src: './assets/fotos/bannerr', description: 'O Chevette Turbo está de volta com uma força incrível! Equipado com um motor turbo que garante acelerações rápidas e impressionantes, este clássico está pronto para dominar a pista. Com um visual renovado e uma performance surpreendente, o Chevette Turbo promete arrancadas de tirar o fôlego. Não perca a oportunidade de ver este ícone transformado em uma máquina de velocidade!' },
-            { src: 'antigo2.jpg', description: 'O Quadrado Turbo 2 está para acelerar na pista de arrancada! Com seu motor turbo atualizado e um design clássico repaginado, este hatchback combina nostalgia e potência. Suas melhorias na performance garantem arrancadas rápidas e uma condução emocionante.' },
-            { src: 'bmw.jpg', description: 'A BMW M4 Turbo chega com tudo para a arrancada! Equipado com um motor turbo potente e tecnologia de ponta, este esportivo oferece acelerações impressionantes e uma experiência de condução de alto nível. Com um design elegante e aerodinâmico, a M4 Turbo combina luxo e performance, garantindo uma presença marcante na pista. Prepare-se para testemunhar o desempenho excepcional desta máquina!' }
-        ];
-        let currentIndex = 0;
-
-        const imgElement = document.getElementById('gallery-image');
-        const descriptionElement = document.getElementById('gallery-description');
-
-        function updateGallery() {
-            imgElement.src = images[currentIndex].src;
-            descriptionElement.textContent = images[currentIndex].description;
-        }
-
-        document.getElementById('prev').addEventListener('click', () => {
-            currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
-            updateGallery();
-        });
-
-        document.getElementById('next').addEventListener('click', () => {
-            currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
-            updateGallery();
-        });
-
-        updateGallery(); //
-    </script>
-
     <!-- Seção de Produtos -->
     <section class="produtos">
         <div class="container">
-            <h2>Nossos Produtos</h2>
+            <h2>Produtos populares</h2>
             <div class="produtos-lista">
                 <div class="produto">
-                    <img src="./assets/fotos/cebola.jpeg" alt="Produto 1">  
+                    <div>
+                        <img src="./assets/fotos/cebola.jpeg" alt="Produto 1">  
+                    </div>
                     <h3>Cebola</h3>
                     <p>Descrição do produto.</p>
                     <button>Adicionar ao Carrinho</button>
                 </div>
+
                 <div class="produto">
-                    <img src="./assets/fotos/tomate.jpeg" alt="Produto 2">
+                    <div>
+                        <img src="./assets/fotos/tomate.jpeg" alt="Produto 2">
+                    </div>
                     <h3>Tomate</h3>
                     <p>Descrição do produto.</p>
                     <button>Adicionar ao Carrinho</button>
                 </div>
+
                 <div class="produto">
-                    <img src="./assets/fotos/limao.jpeg" alt="Produto 3">
+                    <div>
+                        <img src="./assets/fotos/limao.jpeg" alt="Produto 3">
+                    </div>
                     <h3>Limão</h3>
                     <p>Descrição do produto.</p>
                     <button>Adicionar ao Carrinho</button>
                 </div>
+
                 <div class="produto">
-                    <img src="./assets/fotos/alho.jpeg" alt="Produto 4">
+                    <div>
+                        <img src="./assets/fotos/alho.jpeg" alt="Produto 4">
+                    </div>
                     <h3>Alho</h3>
                     <p>Descrição do produto.</p>
                     <button>Adicionar ao Carrinho</button>
                 </div>
+
                 <div class="produto">
-                    <img src="./assets/fotos/hortela.jpeg" alt="Produto 5">
+                    <div>
+                        <img src="./assets/fotos/hortela.jpeg" alt="Produto 5">
+                    </div>
                     <h3>Hortelã</h3>
                     <p>Descrição do produto.</p>
                     <button>Adicionar ao Carrinho</button>

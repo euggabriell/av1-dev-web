@@ -1,8 +1,15 @@
-
+body {
+    background-color: #fbf9f9;
+}
 /* Produtos */
 .produtos {
-    background-color: #f4f4f4;
+    margin-top: 40px;
     padding: 50px 0;
+
+    border-top: 5px dotted #FF8C00;
+    border-radius: 20vw 20vw 0 0;
+
+    background-color: #FFF;
 }
 
 .produtos .container {
@@ -14,64 +21,14 @@
 .produtos h2 {
     font-size: 2em;
     margin-bottom: 30px;
+    color: #263848;
+    letter-spacing: 5px;
 }
 
 .produtos-lista {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-}
-
-.produto {
-    background-color: white;
-    border: 1px solid #ddd;
-    padding: 20px;
-    margin: 15px;
-    width: 250px;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s; /* Adicionando transição suave ao zoom */
-    position: relative;
-}
-
-.produto:hover {
-    transform: scale(1.05); /* Aumenta o tamanho do produto ao passar o mouse */
-    z-index: 10; /* Garante que o produto esteja acima dos outros quando em foco */
-}
-
-.produto img {
-    max-width: 100%;
-    height: auto;
-    transition: transform 0.3s ease; /* Suaviza o efeito de zoom da imagem */
-}
-
-.produto img:hover {
-    transform: scale(1.1); /* Aplica o efeito de zoom à imagem */
-}
-
-.produto h3 {
-    font-size: 1.3em;
-    margin-top: 10px;
-}
-
-.produto p {
-    font-size: .9em;
-    margin: 10px 0;
-}
-
-.produto button {
-    background-color: #FF8C00;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    font-size: .9em;
-    border-radius: 20px;
-}
-
-.produto button:hover {
-    background-color: #e67e00;
-    transform: scale(1.05);
 }
 
 .gallery {
@@ -109,49 +66,18 @@
 }
 
 @media (max-width: 1200px) {
-    header .container {
-        padding: 10px;
-    }
-
-    header h1 {
-        font-size: 2em;
-    }
-
-    header nav ul li {
-        margin: 0 10px;
-    }
-
     .produtos .container {
         width: 95%;
     }
+}
 
-    .produto {
-        width: 45%;
+@media (max-width: 830px) {
+    .gallery {
+        margin-inline: 2%;
     }
 }
 
 @media (max-width: 768px) {
-    header .container {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px;
-    }
-
-    header h1 {
-        font-size: 1.8em;
-        margin-top: 15px;
-    }
-
-    header nav ul {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    header nav ul li {
-        margin: 10px 0;
-    }
-
     .produtos h2 {
         font-size: 2.2em;
     }
@@ -159,33 +85,12 @@
     .produtos-lista {
         flex-direction: column;
     }
-
-    .produto {
-        width: 90%;
-        margin: 10px auto;
-    }
 }
 
 @media (max-width: 480px) {
-    header h1 {
-        font-size: 1.6em;
-    }
-
     .search-input {
         width: 100%;
         max-width: 100%;
         padding: 8px 12px;
-    }
-
-    .produtos h2 {
-        font-size: 2em;
-    }
-
-    .produto {
-        width: 90%;
-    }
-
-    footer p {
-        font-size: 0.9em;
     }
 }

@@ -1,0 +1,90 @@
+.produto {
+    padding: 20px;
+    margin: 15px;
+    
+    width: clamp(250px, 25vw,400px);
+    height: 445px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s; 
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.produto:hover {
+    transform: scale(1.05); 
+    z-index: 10;
+}
+
+.produto > div:first-child {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+
+}
+
+.produto > div:first-child img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease; /* Suaviza o efeito de zoom da imagem */
+}
+
+.produto img:hover {
+    transform: scale(1.1); /* Aplica o efeito de zoom à imagem */
+}
+
+.produto h3 {
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+.produto p {
+    font-size: 1em;
+    margin: 10px 0;
+}
+
+.produto button {
+    background-color: #FF8C00;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 20px;
+
+    transition: all 300ms ease-in-out;
+}
+
+.produto button:hover {
+    background-color: #e67e00;
+    transform: scale(1.05);
+}
+
+@media (max-width: 1200px) {
+    .produto {
+        width: 45%;/* 🆕 ocupa toda a largura */
+        min-width: 300px;
+        max-width: 420px;
+    }
+}
+
+@media (max-width: 768px) {
+    .produto {
+        width: 90%;/* 🆕 ocupa toda a largura */
+        min-width: 300px;
+        max-width: 420px;
+        margin: 15px auto; /* 🆕 mais espaçamento vertical */
+    }
+}
+
+@media (max-width: 480px) {
+    .produto {
+        width: 90%;
+    }
+}
+
+
