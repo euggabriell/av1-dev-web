@@ -9,6 +9,9 @@
     transition: transform 0.3s; 
     position: relative;
 
+   border: 1px solid #f3f1f1;
+   border-radius: 5%;
+
     display: flex;
     flex-direction: column;
     align-items: center;
