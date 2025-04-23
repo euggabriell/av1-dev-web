@@ -1,3 +1,8 @@
+body {
+    background-color: var(--bg-secondary-color);
+    transition: all 350ms ease-in-out;
+}
+
 main {
     width: 100%;
     height: 90vh;
@@ -11,7 +16,8 @@ main {
     
     gap: 90px;
 
-    background-color: #F4F4F4;
+    background-color: var(--bg-secondary-color);
+    transition: all 350ms ease-in-out;
 }
 
 main #contact-options {
@@ -26,7 +32,7 @@ main #contact-options {
 main #contact-options > strong {
     font-size: 27px;
     text-align: center;
-    color: #34495E;
+    color: var(--text-third-color);
 }
 
 main #contact-options > div {
@@ -59,15 +65,17 @@ main #contact-options > div div.contact-way > :first-child {
     border: 2px solid #E1E1E1;
 }
 
-main #contact-options > div div.contact-way > :first-child img {
+main #contact-options > div div.contact-way > :first-child svg {
     object-fit: cover;
     width: 100%;
     height: 100%;
+
+    color: var(--text-fourth-color);
 }
 
 main #contact-options > div div.contact-way > span {
     font-size: 16px;
-    color: #192b3f;
+    color: var(--text-color);
 }
 
 main form {
