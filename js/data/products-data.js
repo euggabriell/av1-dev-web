@@ -3,12 +3,9 @@ export const produtos = [
 { nome: "Cebola", categoria: "hortifruti", preco: 3.50, imagem: "../../assets/fotos/produtos/cebola.png" }, 
 { nome: "Tomate", categoria: "hortifruti", preco: 4.20, imagem: "../../assets/fotos/produtos/tomate.png" }, 
 { nome: "Limão", categoria: "hortifruti", preco: 2.00, imagem: "../../assets/fotos/produtos/limao.png" }, 
-{ nome: "Alface", categoria: "hortifruti", preco: 1.80, imagem: "../../assets/fotos/produtos/alface.png" }, 
 { nome: "Batata", categoria: "hortifruti", preco: 3.00, imagem: "../../assets/fotos/produtos/Batata.png" }, 
 { nome: "Cenoura", categoria: "hortifruti", preco: 2.50, imagem: "../../assets/fotos/produtos/Cenoura.png" }, 
-{ nome: "Maçã", categoria: "hortifruti", preco: 4.00, imagem: "../../assets/fotos/produtos/maça.png" }, 
 { nome: "Banana", categoria: "hortifruti", preco: 3.80, imagem: "../../assets/fotos/produtos/Banana.png" }, 
-{ nome: "Abobrinha", categoria: "hortifruti", preco: 3.20, imagem: "../../assets/fotos/produtos/Abobrinha.png" }, 
 { nome: "Repolho", categoria: "hortifruti", preco: 2.70, imagem: "../../assets/fotos/produtos/Repolho.png" }, 
 // Temperos 
 { nome: "Alho", categoria: "temperos", preco: 6.50, imagem: "../../assets/fotos/produtos/alho.png" }, 
@@ -31,23 +28,18 @@ export const produtos = [
 { nome: "Detergente", categoria: "limpeza", preco: 1.99, imagem: "../../assets/fotos/produtos/detergente.png" }, 
 { nome: "Desinfetante", categoria: "limpeza", preco: 3.75, imagem: "../../assets/fotos/produtos/desinfetante.png" }, 
 { nome: "Sabão em pó", categoria: "limpeza", preco: 7.50, imagem: "../../assets/fotos/produtos/sabão.png" }, 
-{ nome: "Esponja", categoria: "limpeza", preco: 1.20, imagem: "../../assets/fotos/produtos/esponja.png" }, 
-{ nome: "Água sanitária", categoria: "limpeza", preco: 2.90, imagem: "../../assets/fotos/produtos/aguasanitaria.png" }, 
-{ nome: "Amaciante", categoria: "limpeza", preco: 5.00, imagem: "../../assets/fotos/produtos/amaciante.png" }, 
+{ nome: "Água sanitária", categoria: "limpeza", preco: 2.90, imagem: "../../assets/fotos/produtos/aguasanitaria.png" },  
 // Padaria 
 { nome: "Pão Francês", categoria: "padaria", preco: 0.50, imagem: "../../assets/fotos/produtos/pao.png" }, 
 { nome: "Bolo de Chocolate", categoria: "padaria", preco: 9.90, imagem: "../../assets/fotos/produtos/bolo.png" }, 
-{ nome: "Pão de Forma", categoria: "padaria", preco: 6.00, imagem: "../../assets/fotos/produtos/paodeforma.png" }, 
 { nome: "Croissant", categoria: "padaria", preco: 3.00, imagem: "../../assets/fotos/produtos/croissant.png" }, 
 { nome: "Pão Integral", categoria: "padaria", preco: 6.20, imagem: "../../assets/fotos/produtos/paointegral.png" }, 
 { nome: "Rosquinha", categoria: "padaria", preco: 3.50, imagem: "../../assets/fotos/produtos/rosquinha.png" }, 
-{ nome: "Pão de Queijo", categoria: "padaria", preco: 4.80, imagem: "../../assets/fotos/produtos/paoqueijo.png" }, 
 // Congelados 
 { nome: "Pizza Congelada", categoria: "congelados", preco: 12.90, imagem: "../../assets/fotos/produtos/pizza.png" }, 
 { nome: "Lasanha Congelada", categoria: "congelados", preco: 10.50, imagem: "../../assets/fotos/produtos/lasanha.png" }, 
 { nome: "Hambúrguer Congelado", categoria: "congelados", preco: 11.00, imagem: "../../assets/fotos/produtos/hamburguer.png" }, 
 { nome: "Frango Empanado", categoria: "congelados", preco: 15.00, imagem: "../../assets/fotos/produtos/frango.png" }, 
 { nome: "Sorvete de Chocolate", categoria: "congelados", preco: 18.50, imagem: "../../assets/fotos/produtos/sorvete.png" }, 
-{ nome: "Nuggets", categoria: "congelados", preco: 9.90, imagem: "../../assets/fotos/produtos/nuggets.png" }, 
 { nome: "Polpa de Fruta", categoria: "congelados", preco: 5.00, imagem: "../../assets/fotos/produtos/polpa.png" } 
 ];
