@@ -1,3 +1,17 @@
+:root {
+    --bg-color: #ffffff;
+    --bg-secondary-color: #fbf9f9;
+    --text-color: #263848;
+    --text-secondary-color: #201f1f;
+  }
+  
+[data-theme="dark"] {
+    --bg-color: #194B64;
+    --bg-secondary-color: #124158;
+    --text-color: #EAECEE;
+    --text-secondary-color: #FFF;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -15,6 +29,8 @@ body {
 
 button {
     cursor: pointer;
+    background: none;
+    border: none;
 }
 
 input {
