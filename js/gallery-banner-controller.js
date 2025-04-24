@@ -1,7 +1,9 @@
+const baseUrl = `${window.location.origin}/${window.location.pathname.split("/")[1]}/`
+
 const images = [
-    { src: '../assets/fotos/Banner.png'},
-    { src: '../assets/fotos/BannerPizza.jpg'},
-    { src: '../assets/fotos/BannerBebida.png'}
+    { src: `${baseUrl}assets/fotos/Banner.png`},
+    { src: `${baseUrl}assets/fotos/BannerPizza.jpg`},
+    { src: `${baseUrl}assets/fotos/BannerBebida.png`}
 ];
 let currentIndex = 0;
 

@@ -1,5 +1,7 @@
 import { darkLightModeController } from "./dark-light-mode.js";
 
+const baseUrl = `${window.location.origin}/${window.location.pathname.split("/")[1]}/`
+
 function insertFooter() {
     const footer = document.querySelector("footer")
 
@@ -9,7 +11,7 @@ function insertFooter() {
         </div>
 
         <button id="dark-mode-button">
-            <img src="${window.location.origin}/assets/svg/moon-dark.svg" alt="botão dark/light mode" />
+            <img src="${baseUrl}assets/svg/moon-dark.svg" alt="botão dark/light mode" />
         </button>
     `
     

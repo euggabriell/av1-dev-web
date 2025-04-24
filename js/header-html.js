@@ -4,7 +4,7 @@ const baseUrl = `${window.location.origin}/${window.location.pathname.split("/")
 const headerHTML = `
     <div id="logo-title">
         <div class="logo">
-            <img src="${window.location.origin}/${window.location.pathname.split('/')[1]}/assets/svg/cart-icon.svg" alt="logo">
+            <img src="${baseUrl}assets/svg/cart-icon.svg" alt="logo">
         </div>
         <h1>Mercado <br>Econômico</h1>
     </div>
@@ -20,7 +20,7 @@ const headerHTML = `
     <div class="search-container">
         <input class="search-input" type="text" id="search" placeholder="Pesquise aqui por produto e/ou marca..." autocomplete="off">
         <button class="search-button">
-            <img src="${window.location.origin}/assets/svg/lupa.svg" alt="Lupa">
+            <img src="${baseUrl}assets/svg/lupa.svg" alt="Lupa">
         </button>
     </div>
 `
@@ -28,13 +28,13 @@ const headerHTML = `
 const headerResponsiveHTML =`
     <div id="logo-title">
         <div class="logo">
-            <img src="${window.location.origin}/assets/svg/cart-icon.svg" alt="logo">
+            <img src="${baseUrl}assets/svg/cart-icon.svg" alt="logo">
         </div>
         <h1>Mercado <br>Econômico</h1>
     </div>
     
     <button class="side-bar-button " id="open-side-bar">
-        <img src="${window.location.origin}/assets/svg/side-bar-icon.svg" alt="menu lateral">
+        <img src="${baseUrl}assets/svg/side-bar-icon.svg" alt="menu lateral">
     </button>
 `
 
@@ -44,7 +44,7 @@ sideBarHTML.classList = ["close"]
 
 sideBarHTML.innerHTML = `
     <button class="side-bar-button" id="close-side-bar">
-        <img src="${window.location.origin}/assets/svg/close-icon.svg" alt="logo">
+        <img src="${baseUrl}assets/svg/close-icon.svg" alt="logo">
     </button>
 
     <nav>
