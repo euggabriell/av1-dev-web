@@ -36,6 +36,10 @@ footer button img {
     width: 25px;
 }
 
+footer button.invisible {
+    display: none;
+}
+
 @media (max-width: 545px) {
     footer p {
         font-size: .8em;
