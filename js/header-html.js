@@ -4,7 +4,7 @@ const baseUrl = `${window.location.origin}/${window.location.pathname.split("/")
 const headerHTML = `
     <div id="logo-title">
         <div class="logo">
-            <img src="${window.location.origin}/assets/svg/cart-icon.svg" alt="logo">
+            <img src="${window.location.origin}/${window.location.pathname.split('/')[1]}/assets/svg/cart-icon.svg" alt="logo">
         </div>
         <h1>Mercado <br>Econômico</h1>
     </div>
