@@ -1,12 +1,22 @@
 
-export function darkLightModeController() {
-    const currentTheme = document.querySelector("body").getAttribute("data-theme");
+export function darkLightModeController(isToogle = false) {
 
-    console.log(currentTheme)
+    let currentTheme = localStorage.getItem('currentTheme');
 
-    if (currentTheme === "dark") {
-        document.querySelector("body").setAttribute("data-theme", "light");
-    } else {
-        document.querySelector("body").setAttribute("data-theme", "dark");
+    if(!currentTheme) {
+        localStorage.setItem("currentTheme", "light")
+
+        currentTheme = localStorage.getItem('currentTheme') 
     }
+
+    if(isToogle) {
+        const newTheme = currentTheme === "dark" ? "light" : "dark"
+    
+        document.querySelector("body").setAttribute("data-theme", newTheme);
+    
+        localStorage.setItem('currentTheme', newTheme)
+    } else {
+        document.querySelector("body").setAttribute("data-theme", currentTheme);
+    }
+
 }

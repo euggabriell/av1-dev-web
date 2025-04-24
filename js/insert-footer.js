@@ -15,7 +15,9 @@ function insertFooter() {
         </button>
     `
     
-    document.getElementById("dark-mode-button").addEventListener("click", darkLightModeController);
+    document.getElementById("dark-mode-button").addEventListener("click", () => darkLightModeController(true));
 }
+
+darkLightModeController()
 
 window.addEventListener('load', insertFooter);
