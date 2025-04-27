@@ -1,6 +1,5 @@
 const baseUrl = `${window.location.origin}/${window.location.pathname.split("/")[1]}/`
 
-
 const headerHTML = `
     <div id="logo-title">
         <div class="logo">
