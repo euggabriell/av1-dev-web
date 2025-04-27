@@ -45,3 +45,8 @@ input {
     outline: none;
     border: none;
 }
+
+body[data-theme="dark"] input,
+body[data-theme="dark"] textarea  {
+    color: #FFF;
+}
