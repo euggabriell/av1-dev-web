@@ -48,6 +48,12 @@ main {
     transition: all 350ms ease-in-out;
 }
 
+.form-container input:focus {
+    outline: none;
+
+    border: 1px solid #FF8C00;
+}
+
 .form-container button {
     width: 100%;
     padding: 12px;
