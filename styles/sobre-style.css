@@ -10,7 +10,7 @@ main {
     align-items: center;
     gap: 20vh;
 
-    transition: all 350ms ease-in-out;
+    transition: background-color 350ms ease-in-out;
 }
 
 main div#about-us {

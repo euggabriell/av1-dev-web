@@ -8,14 +8,10 @@ body {
 
     min-height: 100vh;
 
-    transition: all 350ms ease-in-out;
+    transition: background-color 350ms ease-in-out;
 }
   
 main {
-    background-color: var(--bg-secondary-color);
-
-    transition: all 350ms ease-in-out;
-
     flex-grow: 1;
     display: flex;
     justify-content: center;
@@ -30,7 +26,7 @@ main {
     max-width: 400px;
     width: 100%;
 
-    transition: all 350ms ease-in-out;
+    transition: box-shadow 350ms ease-in-out, background-color 350ms ease-in-out;
 }
 
 .form-container h2 {
@@ -43,9 +39,13 @@ main {
     width: 100%;
     padding: 12px;
     margin: 10px 0;
+
     border: 1px solid #ccc;
     border-radius: 8px;
+    
     background-color: var(--bg-secondary-color);
+
+    transition: all 350ms ease-in-out;
 }
 
 .form-container button {
