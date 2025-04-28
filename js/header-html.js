@@ -13,6 +13,7 @@ const headerHTML = `
             <li><a href=${baseUrl}pages/produto.html>Produtos</a></li>
             <li><a href=${baseUrl}pages/sobre.html>Sobre</a></li>
             <li><a href=${baseUrl}pages/contato.html>Contato</a></li>
+            <li><a href=${baseUrl}pages/login.html>Login</a></li>
         </ul>
     </nav>
 
@@ -52,6 +53,7 @@ sideBarHTML.innerHTML = `
             <li><a href=${baseUrl}pages/produto.html>Produtos</a></li>
             <li><a href=${baseUrl}pages/sobre.html>Sobre</a></li>
             <li><a href=${baseUrl}pages/contato.html>Contato</a></li>
+            <li><a href=${baseUrl}pages/login.html>Login</a></li>
         </ul>
     </nav>
 `
