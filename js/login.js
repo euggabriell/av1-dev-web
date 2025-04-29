@@ -58,18 +58,25 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 function cadastrar() {
-    const nome = document.getElementById('nome').value;
-    const email = document.getElementById('cadEmail').value;
-    const senha = document.getElementById('cadSenha').value;
+  const nome = document.getElementById('nome').value;
+  const email = document.getElementById('cadEmail').value;
+  const senha = document.getElementById('cadSenha').value;
 
-    if (!nome || !email || !senha) {
-        alert('Preencha todos os campos.');
-        return;
-    }
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;  //regex que verifica se o texto possui o @ o ponto literal e um final com, net ou org
 
-    localStorage.setItem('usuario', JSON.stringify({ nome, email, senha }));
-    alert('Cadastro realizado com sucesso!');
-    mostrarLogin();
+  if (!nome || !email || !senha) {
+      alert('Preencha todos os campos.');
+      return;
+  }
+
+  if (!emailRegex.test(email)) {
+    alert('Por favor, insira um email válido.');
+    return;
+  }
+
+  localStorage.setItem('usuario', JSON.stringify({ nome, email, senha }));
+  alert('Cadastro realizado com sucesso!');
+  mostrarLogin();
 }
 
 function login() {
